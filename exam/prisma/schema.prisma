@@ -1,0 +1,22 @@
+model Post {
+  id         Int       @id @default(autoincrement())
+  author     String
+  title      String
+  body       String?
+  createdAt  DateTime  @default(now())
+  categories Category[]
+}
+
+model Category {
+  id    Int     @id @default(autoincrement())
+  name  String
+  posts Post[]
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db" 
+}
+generator client {
+  provider = "prisma-client-js"
+}
