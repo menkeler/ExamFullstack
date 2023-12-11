@@ -1,5 +1,13 @@
 ## Post News App
 
+setup
+```
+git clone https://github.com/menkeler/ExamFullstack.git
+cd ExamFullstack
+cd exam
+npm run dev
+```
+
 ## Libaries Used
 ```
 npm i -D daisyui@latest
